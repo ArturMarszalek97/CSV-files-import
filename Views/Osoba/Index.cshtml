@@ -1,0 +1,14 @@
+﻿@model WebApplication1.ViewModels.Osoby.OsobaVM
+
+@{
+    ViewBag.Title = "Csv";
+}
+
+<h2>Dane z pliku CSV</h2>
+
+@foreach(var o in Model.dane)
+{
+    <div>
+       <b>Wiersz nr:</b> @Html.DisplayFor(item => o.wiersz) <b>Imie:</b> @Html.DisplayFor(item => o.imie)       <b>Nazwisko:</b> @Html.DisplayFor(item => o.nazwisko)           <b>Indeks:</b> @Html.DisplayFor(item => o.indeks)
+    </div>
+}
